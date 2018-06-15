@@ -16,7 +16,5 @@ export class ParentComponentComponent implements OnInit {
   ngOnInit() {
   }
 
-  onNotify(){
-    console.log(this.childTitle);
-  }
+  
 }

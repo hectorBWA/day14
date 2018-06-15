@@ -5,15 +5,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   template:
   `
   <h2>{{ title }}</h2>
-  
-  <button (click)="notifyParent()">click me</button>`
+  `
   ,
   styleUrls: ['./child-component.component.css']
 })
 export class ChildComponentComponent implements OnInit {
 
 @Input() title: string;
-@Output() parentNotified = new EventEmitter<string>();
+// @Output() parentNotified = new EventEmitter<string>();
 // title = "I'm a nested component";
 
   constructor() { }
@@ -21,9 +20,7 @@ export class ChildComponentComponent implements OnInit {
   ngOnInit() {
   }
 
-  notifyParent(){
-    this.parentNotified.emit(this.title);
-  }
+ 
 
 
 }
